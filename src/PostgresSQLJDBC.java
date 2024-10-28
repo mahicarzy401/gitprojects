@@ -7,10 +7,10 @@ public class PostgresSQLJDBC {
    public static void main(String[] args) {
       String url = "jdbc:postgresql://localhost:5432/postgres";
       String user = "postgres";
-      String password = "root";
+      String password = "postgres";
       
       try (Connection conn1 = DriverManager.getConnection(url, user, password)) {
-          System.out.println("Connected to the PostgreSQL server successfully.");
+          System.out.println(conn1 + "Connected to the PostgreSQL server successfully.");
       } catch (SQLException e) {
           System.out.println("Connection failure!");
           e.printStackTrace();
